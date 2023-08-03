@@ -1,0 +1,102 @@
+{% extends 'dashboard/inc/base.html' %}
+{% load static %}
+{% block title %} Lavender Online | Categories {% endblock title %}
+{% block content %}
+<section class="content-main">
+    <div class="content-header">
+        <div>
+            <h2 class="content-title card-title">Category</h2>
+            <p>Add a category</p>
+        </div>
+        <div>
+            <a class="btn btn-primary" href="{% url 'category' %}">
+                <i class="text-muted material-icons md-arrow_back"></i>Back to Category
+            </a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-12">
+                    <form method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <label class="form-label">Category Name</label>
+                                    {{ form.name }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <label class="form-label">Category Id</label>
+                                    {{ form.cid }}
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <label class="form-label">Parent Category</label>
+                                    {{ form.parent }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <label class="form-label">Featured Category</label>
+                                    {{ form.featured }}
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <label class="form-label">Category Icon</label>
+                                    {{ form.icon }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <label class="form-label">Category Image</label>
+                                    {{ form.image }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <label class="form-label">Category Banner</label>
+                                    {{ form.banner }}
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <label class="form-label">Category Status</label>
+                                    {{ form.status }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <label class="form-label">Category Meta Title</label>
+                                    {{ form.meta_title }}
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="mb-4">
+                                    <label class="form-label">Category Meta Description</label>
+                                    {{ form.meta_description }}
+                                </div>
+                            </div>
+                        </div>
+                        {{form.media}}
+                        <div class="form-group">
+                            <button class="btn btn-primary">Create category</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- .row // -->
+        </div>
+        <!-- card body .// -->
+    </div>
+    <!-- card .// -->
+</section>
+
+{% endblock content %}

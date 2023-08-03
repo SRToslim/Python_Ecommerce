@@ -1,0 +1,244 @@
+﻿{% extends 'inc/base.html' %}
+{% load static %}
+{% load active_link_tags %}
+{% block title %} Lavender Online Grocery Shop in Dhaka City {% endblock title %}
+{% block content %}
+<main class="main pages">
+    <div class="page-header breadcrumb-wrap">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="{% url 'index' %}" rel="nofollow"><i class="fi-rs-home mr-5"></i>Home</a>
+                <span></span> Pages <span></span> My Account
+            </div>
+        </div>
+    </div>
+    <div class="page-content pt-150 pb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 m-auto">
+                    <div class="row">
+                        {% include 'customer/sidebar.html' %}
+                        <div class="col-md-9">
+                            <div class="pl-50">
+                                <div class="card shadow-none rounded-0 border">
+                                    <div class="card-header border-bottom-0">
+                                        <h5 class="mb-0 fs-20 fw-700 text-dark">Purchase History</h5>
+                                    </div>
+                                    <div class="card-body">
+                                        <table class="table aiz-table mb-0 footable footable-1 breakpoint breakpoint-xs"
+                                               style="">
+                                            <thead class="text-gray fs-12">
+                                                <tr class="footable-header">
+                                                    <th>Code</th>
+                                                    <th>Date</th>
+                                                    <th>Amount</th>
+                                                    <th>Delivery Status</th>
+                                                    <th>Payment Status</th>
+                                                    <th>Options</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody class="fs-14">
+
+
+                                            <tr>
+                                                <td class="pl-0 footable-first-visible">
+                                                    <span class="footable-toggle fooicon fooicon-plus"></span>
+                                                    <a href="#">20230610-12592169</a>
+                                                </td>
+                                                <td class="text-secondary" >10-06-2023</td>
+                                                <td class="fw-700">
+                                                    ৳3,430.00
+                                                </td>
+                                                <td class="fw-700">
+                                                    Processing
+                                                </td>
+                                                <td>
+                                                    <span class="badge bg-warning p-3 fs-12"
+                                                          style="border-radius: 25px; min-width: 80px !important;">Unpaid</span>
+                                                </td>
+                                                <td class="text-right pr-0 footable-last-visible">
+                                                    <a href="#"
+                                                       class="btn btn-soft-info btn-icon btn-circle btn-sm hov-svg-white"
+                                                       title="Order Details">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10"
+                                                             viewBox="0 0 12 10">
+                                                            <g id="Group_24807" data-name="Group 24807"
+                                                               transform="translate(-1339 -422)">
+                                                                <rect id="Rectangle_18658" data-name="Rectangle 18658"
+                                                                      width="12" height="1"
+                                                                      transform="translate(1339 422)"
+                                                                      fill="#3490f3"></rect>
+                                                                <rect id="Rectangle_18659" data-name="Rectangle 18659"
+                                                                      width="12" height="1"
+                                                                      transform="translate(1339 425)"
+                                                                      fill="#3490f3"></rect>
+                                                                <rect id="Rectangle_18660" data-name="Rectangle 18660"
+                                                                      width="12" height="1"
+                                                                      transform="translate(1339 428)"
+                                                                      fill="#3490f3"></rect>
+                                                                <rect id="Rectangle_18661" data-name="Rectangle 18661"
+                                                                      width="12" height="1"
+                                                                      transform="translate(1339 431)"
+                                                                      fill="#3490f3"></rect>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                    <a class="btn btn-soft-warning btn-icon btn-circle btn-sm hov-svg-white"
+                                                       href="https://lavendersuperstore.com.bd/invoice/18"
+                                                       title="Download Invoice">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                             height="12.001" viewBox="0 0 12 12.001">
+                                                            <g id="Group_24807" data-name="Group 24807"
+                                                               transform="translate(-1341 -424.999)">
+                                                                <path id="Union_17" data-name="Union 17"
+                                                                      d="M13936.389,851.5l.707-.707,2.355,2.355V846h1v7.1l2.306-2.306.707.707-3.538,3.538Z"
+                                                                      transform="translate(-12592.95 -421)"
+                                                                      fill="#f3af3d"></path>
+                                                                <rect id="Rectangle_18661" data-name="Rectangle 18661"
+                                                                      width="12" height="1"
+                                                                      transform="translate(1341 436)"
+                                                                      fill="#f3af3d"></rect>
+                                                            </g>
+                                                        </svg>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                                <tr>
+                                                    <td class="pl-0 footable-first-visible" >
+                                                        <span class="footable-toggle fooicon fooicon-plus"></span>
+                                                        <a href="#">20230607-12480773</a>
+                                                    </td>
+                                                    <td class="text-secondary" >07-06-2023</td>
+                                                    <td class="fw-700" >
+                                                        ৳3,985.15
+                                                    </td>
+                                                    <td class="fw-700" >
+                                                        Delivered
+                                                    </td>
+                                                    <td >
+                                                        <span class="badge badge-inline bg-success p-3 fs-12"
+                                                              style="border-radius: 25px; min-width: 80px !important;">Paid</span>
+                                                    </td>
+                                                    <td class="text-right pr-0 footable-last-visible">
+                                                        <a href="#"
+                                                           class="btn btn-soft-info btn-icon btn-circle btn-sm hov-svg-white"
+                                                           title="Order Details">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10"
+                                                                 viewBox="0 0 12 10">
+                                                                <g id="Group_24807" data-name="Group 24807"
+                                                                   transform="translate(-1339 -422)">
+                                                                    <rect id="Rectangle_18658" data-name="Rectangle 18658"
+                                                                          width="12" height="1"
+                                                                          transform="translate(1339 422)"
+                                                                          fill="#3490f3"></rect>
+                                                                    <rect id="Rectangle_18659" data-name="Rectangle 18659"
+                                                                          width="12" height="1"
+                                                                          transform="translate(1339 425)"
+                                                                          fill="#3490f3"></rect>
+                                                                    <rect id="Rectangle_18660" data-name="Rectangle 18660"
+                                                                          width="12" height="1"
+                                                                          transform="translate(1339 428)"
+                                                                          fill="#3490f3"></rect>
+                                                                    <rect id="Rectangle_18661" data-name="Rectangle 18661"
+                                                                          width="12" height="1"
+                                                                          transform="translate(1339 431)"
+                                                                          fill="#3490f3"></rect>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a class="btn btn-soft-warning btn-icon btn-circle btn-sm hov-svg-white"
+                                                           href="#"
+                                                           title="Download Invoice">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                 height="12.001" viewBox="0 0 12 12.001">
+                                                                <g id="Group_24807" data-name="Group 24807"
+                                                                   transform="translate(-1341 -424.999)">
+                                                                    <path id="Union_17" data-name="Union 17"
+                                                                          d="M13936.389,851.5l.707-.707,2.355,2.355V846h1v7.1l2.306-2.306.707.707-3.538,3.538Z"
+                                                                          transform="translate(-12592.95 -421)"
+                                                                          fill="#f3af3d"></path>
+                                                                    <rect id="Rectangle_18661" data-name="Rectangle 18661"
+                                                                          width="12" height="1"
+                                                                          transform="translate(1341 436)"
+                                                                          fill="#f3af3d"></rect>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="pl-0 footable-first-visible" >
+                                                        <span class="footable-toggle fooicon fooicon-plus"></span>
+                                                        <a href="#">20230531-13350883</a>
+                                                    </td>
+                                                    <td class="text-secondary" >31-05-2023</td>
+                                                    <td class="fw-700" >
+                                                        ৳1,506.00
+                                                    </td>
+                                                    <td class="fw-700" >
+                                                        Delivered
+                                                    </td>
+                                                    <td >
+                                                        <span class="badge badge-inline bg-success p-3 fs-12"
+                                                              style="border-radius: 25px; min-width: 80px !important;">Paid</span>
+                                                    </td>
+                                                    <td class="text-right pr-0 footable-last-visible"
+                                                        style="display: table-cell;">
+                                                        <a href="#"
+                                                           class="btn btn-soft-info btn-icon btn-circle btn-sm hov-svg-white"
+                                                           title="Order Details">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10"
+                                                                 viewBox="0 0 12 10">
+                                                                <g id="Group_24807" data-name="Group 24807"
+                                                                   transform="translate(-1339 -422)">
+                                                                    <rect id="Rectangle_18658" data-name="Rectangle 18658"
+                                                                          width="12" height="1"
+                                                                          transform="translate(1339 422)"
+                                                                          fill="#3490f3"></rect>
+                                                                    <rect id="Rectangle_18659" data-name="Rectangle 18659"
+                                                                          width="12" height="1"
+                                                                          transform="translate(1339 425)"
+                                                                          fill="#3490f3"></rect>
+                                                                    <rect id="Rectangle_18660" data-name="Rectangle 18660"
+                                                                          width="12" height="1"
+                                                                          transform="translate(1339 428)"
+                                                                          fill="#3490f3"></rect>
+                                                                    <rect id="Rectangle_18661" data-name="Rectangle 18661"
+                                                                          width="12" height="1"
+                                                                          transform="translate(1339 431)"
+                                                                          fill="#3490f3"></rect>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                        <a class="btn btn-soft-warning btn-icon btn-circle btn-sm hov-svg-white"
+                                                           href="#"
+                                                           title="Download Invoice">
+                                                            <svg xmlns="http://www.w3.org/2000/svg" width="12"
+                                                                 height="12.001" viewBox="0 0 12 12.001">
+                                                                <g id="Group_24807" data-name="Group 24807"
+                                                                   transform="translate(-1341 -424.999)">
+                                                                    <path id="Union_17" data-name="Union 17"
+                                                                          d="M13936.389,851.5l.707-.707,2.355,2.355V846h1v7.1l2.306-2.306.707.707-3.538,3.538Z"
+                                                                          transform="translate(-12592.95 -421)"
+                                                                          fill="#f3af3d"></path>
+                                                                    <rect id="Rectangle_18661" data-name="Rectangle 18661"
+                                                                          width="12" height="1"
+                                                                          transform="translate(1341 436)"
+                                                                          fill="#f3af3d"></rect>
+                                                                </g>
+                                                            </svg>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</main>
+{% endblock content %}

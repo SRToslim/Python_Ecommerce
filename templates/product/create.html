@@ -1,0 +1,31 @@
+{% extends 'dashboard/inc/base.html' %}
+{% load static %}
+{% block title %} Lavender Online | Add Product {% endblock title %}
+{% block content %}
+<section class="content-main">
+    <div class="row">
+        <div class="col-8">
+            <div class="content-header">
+                <h2 class="content-title">Add New Product</h2>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card mb-4">
+                <div class="card-body">
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="form-group">
+                            {{ form.as_p }}
+                            <br>
+                        </div>
+                        {{form.media}}
+                        <button type="submit" class="btn btn-primary">Save Product</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

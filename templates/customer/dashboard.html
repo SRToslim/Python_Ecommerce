@@ -1,0 +1,152 @@
+﻿{% extends 'inc/base.html' %}
+{% load static %}
+{% load active_link_tags %}
+{% block title %} Lavender Online Grocery Shop in Dhaka City {% endblock title %}
+{% block content %}
+<main class="main pages">
+    <div class="page-header breadcrumb-wrap">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="{% url 'index' %}" rel="nofollow"><i class="fi-rs-home mr-5"></i>Home</a>
+                <span></span> Pages <span></span> My Account
+            </div>
+        </div>
+    </div>
+    <div class="page-content pt-150 pb-150">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 m-auto">
+                    <div class="row">
+                        {% include 'customer/sidebar.html' %}
+                        <!--                            <div class="col-md-9">-->
+                        <!--                                <div class="tab-content account dashboard-content pl-50">-->
+                        <!--                                    <div class="tab-pane fade active show" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">-->
+                        <!--                                        <div class="card">-->
+                        <!--                                            <div class="card-header">-->
+                        <!--                                                <h3 class="mb-0">Hello {{ request.user.profile.full_name }}</h3>-->
+                        <!--                                            </div>-->
+                        <!--                                            <div class="card-body">-->
+                        <!--                                                <p>-->
+                        <!--                                                    From your account dashboard. you can easily check &amp; view your <a href="#">recent orders</a>,<br />-->
+                        <!--                                                    manage your <a href="#">shipping and billing addresses</a> and <a href="#">edit your password and account details.</a>-->
+                        <!--                                                </p>-->
+                        <!--                                            </div>-->
+                        <!--                                        </div>-->
+                        <!--                                    </div>-->
+                        <!--                                </div>-->
+                        <!--                            </div>-->
+                        <div class="col-lg-9">
+                            <div class="account profile-banner-image dashboard-content pl-50">
+                                <a href="#">
+                                    <img loading="lazy"
+                                         src="https://yoori.spagreen.net/public/images/20230225144036image_940x110-416.png"
+                                         alt="profile-banner">
+                                </a>
+                            </div>
+                            <div class="title justify-between">
+                                <h1>Dashboard</h1>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a href="/user/order-history" class="">
+                                        <div class="card text-center profile-card d-flex justify-center profile-card-red">
+                                            <div class="profile-card-title mb-3">Total Order</div>
+                                            <h3 class="text-white">928</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="/cart" class="">
+                                        <div class="card text-center profile-card d-flex justify-center profile-card-gray">
+                                            <div class="profile-card-title mb-3">Product in Cart</div>
+                                            <h3 class="text-white"> 0</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="/user/wishlist" class="">
+                                        <div class="card text-center profile-card d-flex justify-center profile-card-green">
+                                            <div class="profile-card-title mb-3">Product You Love</div>
+                                            <h3 class="text-white">1</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="/my-wallet" class="">
+                                        <div class="card text-center profile-card d-flex justify-center profile-card-white">
+                                            <div class="profile-card-title text-black mb-3">Wallet Balance</div>
+                                            <h3 class="text-black">$21,628,825.89</h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="card text-center profile-card d-flex justify-center profile-card-white">
+                                        <div class="profile-card-title mb-3 text-black">Last Recharge</div>
+                                        <h3 class="text-black">$1.22</h3>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="#" data-bs-target="#recharge_wallet" data-bs-toggle="modal">
+                                        <div class="card text-center profile-card d-flex justify-center profile-card-white-outline-dashed">
+                                            <div class="profile-card-title mb-3">Recharge Wallet</div>
+                                            <h3><i class="fa fa-plus"></i></h3>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="/my-rewards" class="">
+                                        <div class="card text-center profile-card d-flex justify-center profile-card-white">
+                                            <div class="profile-card-title mb-3 text-black">Total Rewards</div>
+                                            <h3 class="text-black"> 152</h3></div>
+                                    </a></div>
+                                <div class="col-md-4"><a href="/my-rewards" class="">
+                                    <div class="card text-center profile-card d-flex justify-center profile-card-white">
+                                        <div class="profile-card-title mb-3 text-black">Current Rewards</div>
+                                        <h3 class="text-black"> 0</h3></div>
+                                </a></div> <!----></div>
+                            <div class="sg-shipping">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="title mt-3 mb-0 b-0"><h1>Default shipping</h1></div>
+                                        <div class="sg-card address">
+                                            <div class="justify-content-between d-flex">
+                                                <div class="text">
+                                                    <ul class="global-list">
+                                                        <li>Name: farhan</li>
+                                                        <li>Email: vshshbs@gmail.com</li>
+                                                        <li>Phone: +880 01854875787</li>
+                                                        <li>Street Address: 1</li>
+                                                        <li>City: Cox's Bazar</li>
+                                                        <li>Country: Bangladesh</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="title mt-3 mb-0 b-0"><h1>Default billing</h1></div>
+                                        <div class="sg-card address">
+                                            <div class="justify-content-between d-flex">
+                                                <div class="text">
+                                                    <ul class="global-list">
+                                                        <li>Name: farhan</li>
+                                                        <li>Email: vshshbs@gmail.com</li>
+                                                        <li>Phone: +880 01854875787</li>
+                                                        <li>Street Address: 1</li>
+                                                        <li>City: Cox's Bazar</li>
+                                                        <li>Country: Bangladesh</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+{% endblock content %}

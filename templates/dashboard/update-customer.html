@@ -1,0 +1,137 @@
+{% extends 'dashboard/inc/base.html' %}
+{% load static %}
+{% block title %} Lavender Online | {{ customer.full_name }} {% endblock title %}
+{% block content %}
+<section class="content-main">
+    <div class="content-header">
+        <h2 class="content-title">{{ customer.full_name }}'s Profile</h2>
+    </div>
+    <div class="card">
+        <div class="card-body">
+            <div class="row gx-5">
+                <aside class="col-lg-3 border-end">
+                    <div class="">
+                        <img class="img-thumbnail" src="{{ customer.image.url }}" alt="User Photo"/>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-striped table-hover">
+                            <tr>
+                                <td>User Type:</td>
+                                <td>{{ customer.user.user_type }}</td>
+                            </tr>
+                            <tr>
+                                <td>Name:</td>
+                                <td>{{ customer.full_name }}</td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td>{{ customer.user.email }}</td>
+                            </tr>
+                            <tr>
+                                <td>Phone:</td>
+                                <td>{{ customer.phone }}</td>
+                            </tr>
+                            <tr>
+                                <td>Address:</td>
+                                <td>{{ customer.address }}</td>
+                            </tr>
+                            {% if customer.user.user_type == 'vendor' %}
+                            <tr>
+                                <td>Verified:</td>
+                                {% if customer.user.is_active == True %}
+                                <td></td>
+                                {% else %}
+                                <td></td>
+                                {% endif %}
+                            </tr>
+                            {% endif %}
+                            {% if customer.user.ip  %}
+                            <tr>
+                                <td>Registered IP:</td>
+                                <td></td>
+                            </tr>
+                            {% endif %}
+                            <tr>
+                                <td>Last Login:</td>
+                                <td>{{ customer.user.last_login }}</td>
+                            </tr>
+                        </table>
+                    </div>
+                </aside>
+                <div class="col-lg-9">
+                    <section class="content-body p-xl-4">
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-lg-8">
+                                    <div class="row gx-3">
+                                        <div class="col-6 mb-3">
+                                            <label class="form-label">Full name</label>
+                                            <input class="form-control" name="full_name" type="text" value="{{ customer.full_name }}"/>
+                                        </div>
+                                        <!-- col .// -->
+                                        <div class="col-6 mb-3">
+                                            <label class="form-label">User name</label>
+                                            <input class="form-control" name="username" type="text" value="{{ customer.username }}" readonly/>
+                                        </div>
+                                        <!-- col .// -->
+                                        <div class="col-lg-6 mb-3">
+                                            <label class="form-label">Email</label>
+                                            <input class="form-control" name="email" type="email" value="{{ customer.user.email }}" readonly/>
+                                        </div>
+                                        <!-- col .// -->
+                                        <div class="col-lg-6 mb-3">
+                                            <label class="form-label">Phone</label>
+                                            <input class="form-control" name="phone" type="tel" value="{{ customer.phone }}"/>
+                                        </div>
+                                        <!-- col .// -->
+                                        <div class="col-lg-12 mb-3">
+                                            <label class="form-label">Address</label>
+                                            <input class="form-control" name="address" type="text" value="{{ customer.address }}"/>
+                                        </div>
+                                        <!-- col .// -->
+                                        <div class="col-lg-6 mb-3">
+                                            <label class="form-label">City</label>
+                                            <input class="form-control" name="city" type="text" value="{{ customer.city }}"/>
+                                        </div>
+                                        <!-- col .// -->
+                                        <div class="col-lg-6 mb-3">
+                                            <label class="form-label">Zipcode</label>
+                                            <input class="form-control" name="zipcode" type="text" value="{{ customer.zipcode }}"/>
+                                        </div>
+                                        <!-- col .// -->
+                                        <div class="col-lg-6 mb-3">
+                                            <label class="form-label">Country</label>
+                                            <input class="form-control" name="country" type="text" value="{{ customer.country }}"/>
+                                        </div>
+                                    </div>
+                                    <!-- row.// -->
+                                </div>
+                                <!-- col.// -->
+                                <aside class="col-lg-4">
+                                    <figure class="text-lg-center">
+                                        <img class="img-lg mb-3 img-avatar" src="{{ customer.image.url }}"
+                                             alt="User Photo"/>
+                                        <figcaption>
+                                            <input type="file" name="image" class="btn btn-light rounded font-md">
+                                        </figcaption>
+                                    </figure>
+                                </aside>
+                                <!-- col.// -->
+                            </div>
+                            <!-- row.// -->
+                            <br/>
+                            <button class="btn btn-primary" type="submit">Save Profile</button>
+                        </form>
+                    </section>
+                    <!-- content-body .// -->
+                </div>
+                <!-- col.// -->
+            </div>
+            <!-- row.// -->
+        </div>
+        <!-- card body end// -->
+    </div>
+    <!-- card end// -->
+</section>
+{% endblock content %}

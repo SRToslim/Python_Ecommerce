@@ -1,0 +1,73 @@
+﻿{% extends 'inc/base.html' %}
+{% load socialaccount %}
+{% load static %}
+
+{% block title %} Lavender Online | Login {% endblock title %}
+
+{% block content %}
+    <main class="main pages">
+        <div class="page-header breadcrumb-wrap">
+            <div class="container">
+                <div class="breadcrumb">
+                    <a href="{% url 'index' %}" rel="nofollow"><i class="fi-rs-home mr-5"></i>Home</a>
+                    <span></span> Pages <span></span> My Account
+                </div>
+            </div>
+        </div>
+        <div class="page-content pt-150 pb-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-8 col-lg-10 col-md-12 m-auto">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-8">
+                                <div class="login_wrap widget-taber-content background-white">
+                                    <div class="padding_eight_all bg-white">
+                                        <div class="heading_s1">
+                                            <h1 class="mb-5">Login</h1>
+                                            <p class="mb-30">Don't have an account? <a href="{% url 'register' %}">Create here</a></p>
+                                        </div>
+                                        <div class="text-end">
+                                            <a href="{% url 'login' %}">Login with Email</a>
+                                        </div>
+                                        <br>
+                                        <form action="" method="POST">
+                                            {% csrf_token %}
+                                            <div class="form-group">
+                                                <label class="form-label">Enter your OTP</label>
+                                                {{form.otp}}
+                                            </div>
+
+                                            <div class="form-group">
+                                                {{form.captcha}}
+                                            </div>
+
+                                            <div class="form-group">
+                                                <button type="submit" class="btn btn-heading btn-block hover-up">Login</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 pr-30 d-none d-lg-block">
+                                <div class="card-login mt-115">
+                                    <a href="#" class="social-login facebook-login">
+                                        <img src="{% static 'assets/imgs/theme/icons/logo-facebook.svg' %}" alt="" />
+                                        <span>Continue with Facebook</span>
+                                    </a>
+                                    <a href="{% provider_login_url 'google'%}" class="social-login google-login">
+                                        <img src="{% static 'assets/imgs/theme/icons/logo-google.svg' %}" alt="" />
+                                        <span>Continue with Google</span>
+                                    </a>
+                                    <a href="{% provider_login_url 'github'%}" class="social-login apple-login">
+                                        <i class="fa-brands fa-github"></i> &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <span>Continue with Github</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock content %}
