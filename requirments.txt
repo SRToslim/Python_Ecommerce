@@ -1,0 +1,14 @@
+Need bellow package to run this Application
+
+1. django
+2. django-jazzmin
+3. django-taggit
+4. pillow
+5. django-ckeditor
+6. allauth
+7. django-shortuuidfield
+8. pysslcmz
+9. python-gettext
+10. django-modeltranslation
+11. django-active-link
+12. bootstrap_modal_forms
