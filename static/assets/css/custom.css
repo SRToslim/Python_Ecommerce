@@ -1,0 +1,247 @@
+.pass_show {
+    position: relative;
+}
+
+.pass_show .ptxt {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    z-index: 1;
+    color: #f36c01;
+    margin-top: -10px;
+    cursor: pointer;
+    transition: .3s ease all;
+}
+
+.pass_show .ptxt:hover{
+    color: #333333;
+}
+
+.profile-thumb img{
+    border: 10px solid #fff;
+    -webkit-box-shadow: 0 10px 15px 2px rgb(0 0 0/3%);
+    -moz-box-shadow: 0 10px 15px 2px rgba(0,0,0,.03);
+    -ms-box-shadow: 0 10px 15px 2px rgba(0,0,0,.03);
+    -o-box-shadow: 0 10px 15px 2px rgba(0,0,0,.03);
+    box-shadow: 0 0 12px 8px rgb(0 0 0/3%);
+    margin-bottom: 30px
+}
+
+.profile-details{
+    text-align: center;
+    border: 1px solid #eee;
+    padding: 25px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+.position-relative {
+    position: relative!important;
+}
+
+.profile-details h2 {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--theme-color)
+}
+
+.profile-banner-image {
+    margin-bottom: 15px
+}
+
+.title {
+    color: var(--theme-color);
+    display: flex;
+    padding-bottom: 6px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e1e1e1;
+    align-items: center;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 1px solid rgba(0,0,0,.125);
+    border-radius: 0.25rem;
+}
+
+.d-flex {
+    display: flex!important;
+}
+
+.profile-card {
+    max-height: 132px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.profile-card-red {
+    background-color: #ff652f;
+}
+
+.profile-card-gray {
+    background-color: #747474;
+}
+
+.profile-card-green {
+    background-color: #1da76c;
+}
+
+.profile-card-white-outline-dashed {
+    border-style: dashed!important;
+}
+
+.sg-shipping .accordion-header {
+    border-bottom: 1px solid #f3f3f3
+}
+
+.sg-card {
+    padding: 20px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    border: 1px solid #eee;
+    justify-content: space-between
+}
+
+.sg-card.address {
+    position: relative;
+    line-height: 1.2
+}
+
+.sg-card .button {
+    min-width: 95px
+}
+
+.sg-card .button {
+    min-width: 220px
+}
+
+.sg-card.address ul li {
+    margin-bottom: 6px
+}
+
+div#shipping_accordion .sg-card {
+    margin-bottom: 0;
+    border: 0
+}
+
+.sg-card .text li p {
+    color: #999;
+    margin-bottom: 5px
+}
+
+.sg-card .text {
+    margin-inline-end:50px}
+
+.sg-card ul li {
+    margin-bottom: 15px
+}
+
+.sg-card ul li:last-child {
+    margin-bottom: 0
+}
+
+.sg-card .button {
+    min-width: 220px
+}
+
+.sg-card .btn {
+    padding: 8px 25px
+}
+
+.sg-card.address .dropbtn {
+    color: #8987879e;
+    border-radius: 50%;
+    padding: 5px 8px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer
+}
+
+.sg-card.address .dropbtn:hover {
+    background-color: #8987879e;
+    color: #fff;
+    border-radius: 50%
+}
+
+.sg-card.address .dropdown {
+    position: relative;
+    display: inline-block
+}
+
+.sg-card.address .dropdown-content {
+    border-radius: 4px;
+    display: none;
+    position: absolute;
+    inset-inline-end: 0;
+    background-color: #f9f9f9;
+    min-width: 230px;
+    box-shadow: 0 8px 16px 0 rgb(0 0 0/20%);
+    z-index: 1;
+    padding: 12px
+}
+
+.sg-card.address .dropdown-content a {
+    color: #000;
+    padding: 6px 7px;
+    font-size: 13px;
+    display: block;
+    text-decoration: none
+}
+
+.sg-card.address .dropdown-content a:hover {
+    background-color: #e9ecef
+}
+
+.sg-card.address .dropdown:hover .dropdown-content {
+    display: block
+}
+
+.sg-card.address .dropdown:hover .dropbtn {
+    background-color: #8987879e;
+    color: #fff
+}
+
+.sg-card .text {
+    margin-right: 0
+}
+
+.sg-card .text+.text {
+    margin-top: 20px
+}
+
+.global-list, {
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
+
+.btn-circle {
+    border-radius: 50em !important;
+}
+
+.btn-sm.btn-icon {
+    padding: 0.416rem !important;
+    width: calc(2.02rem + 2px) !important;
+    height: calc(2.02rem + 2px) !important;
+}
+
+.btn-soft-info {
+    background-color: rgba(37, 188, 241, 0.15) !important;
+    color: #25bcf1 !important;
+}
+
+.btn-soft-warning {
+    background-color: rgba(243, 175, 61, 0.15) !important;
+    color: #f3af3d !important;
+    ;
+}
